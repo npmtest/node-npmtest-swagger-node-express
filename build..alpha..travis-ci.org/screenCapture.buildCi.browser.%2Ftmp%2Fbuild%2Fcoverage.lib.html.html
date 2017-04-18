@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-swagger-node-express/swagger-node-express/lib/resourceHelpers.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-swagger-node-express/node_modules/swagger-node-express/lib/resourceHelpers.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-swagger-node-express">npmtest-swagger-node-express (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-swagger-node-express/swagger-node-express/lib/resourceHelpers.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-swagger-node-express/node_modules/swagger-node-express/lib/resourceHelpers.js</span></h1>
     <h2>
         
         Statements: <span class="metric">15.63% <small>(5 / 32)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-swagger-node-express/swagger-node-express/lib/</a> &#187; resourceHelpers.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-swagger-node-express/node_modules/swagger-node-express/lib/</a> » resourceHelpers.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -397,64 +395,64 @@ var _ = require('lodash');
 module.exports.wrap = wrap;
 module.exports.appendToApi = appendToApi;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function wrap(callback, req, resp) {</span>
-<span class="cstat-no" title="statement not covered" >  callback(req, resp);</span>
+<span class="fstat-no" title="function not covered">function wrap(callback, req, resp) {</span>
+<span class="cstat-no" title="statement not covered">  callback(req, resp);</span>
 }
 &nbsp;
 // appends a spec to an existing operation
 &nbsp;
-<span class="fstat-no" title="function not covered" >function appendToApi(rootResource, api, spec) {</span>
-<span class="cstat-no" title="statement not covered" >  var validationErrors = [];</span>
+<span class="fstat-no" title="function not covered">function appendToApi(rootResource, api, spec) {</span>
+<span class="cstat-no" title="statement not covered">  var validationErrors = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!spec.nickname || spec.nickname.indexOf(' ') &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered">  if (!spec.nickname || spec.nickname.indexOf(' ') &gt;= 0) {</span>
     //  nicknames don't allow spaces
-<span class="cstat-no" title="statement not covered" >    validationErrors.push({</span>
+<span class="cstat-no" title="statement not covered">    validationErrors.push({</span>
       'path': api.path,
       'error': 'invalid nickname "' + spec.nickname + '"'
     });
   }
   // validate params
-<span class="cstat-no" title="statement not covered" >  _.forOwn(spec.parameters, <span class="fstat-no" title="function not covered" >function (parameter) {</span></span>
+<span class="cstat-no" title="statement not covered">  _.forOwn(spec.parameters, <span class="fstat-no" title="function not covered">function (parameter) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    switch (parameter.paramType) {</span>
+<span class="cstat-no" title="statement not covered">    switch (parameter.paramType) {</span>
     case 'path':
-<span class="cstat-no" title="statement not covered" >      if (api.path.indexOf('{' + parameter.name + '}') &lt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >        validationErrors.push({</span>
+<span class="cstat-no" title="statement not covered">      if (api.path.indexOf('{' + parameter.name + '}') &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered">        validationErrors.push({</span>
           'path': api.path,
           'name': parameter.name,
           'error': 'invalid path'
         });
       }
-<span class="cstat-no" title="statement not covered" >      break;</span>
+<span class="cstat-no" title="statement not covered">      break;</span>
     case 'query':
-<span class="cstat-no" title="statement not covered" >      break;</span>
+<span class="cstat-no" title="statement not covered">      break;</span>
     case 'body':
-<span class="cstat-no" title="statement not covered" >      break;</span>
+<span class="cstat-no" title="statement not covered">      break;</span>
     case 'form':
-<span class="cstat-no" title="statement not covered" >      break;</span>
+<span class="cstat-no" title="statement not covered">      break;</span>
     case 'header':
-<span class="cstat-no" title="statement not covered" >      break;</span>
+<span class="cstat-no" title="statement not covered">      break;</span>
     default:
-<span class="cstat-no" title="statement not covered" >      validationErrors.push({</span>
+<span class="cstat-no" title="statement not covered">      validationErrors.push({</span>
         'path': api.path,
         'name': parameter.name,
         'error': 'invalid param type ' + parameter.paramType
       });
-<span class="cstat-no" title="statement not covered" >      break;</span>
+<span class="cstat-no" title="statement not covered">      break;</span>
     }
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (validationErrors.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >    console.error(validationErrors);</span>
-<span class="cstat-no" title="statement not covered" >    return;</span>
+<span class="cstat-no" title="statement not covered">  if (validationErrors.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">    console.error(validationErrors);</span>
+<span class="cstat-no" title="statement not covered">    return;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!api.operations) {</span>
-<span class="cstat-no" title="statement not covered" >    api.operations = [];</span>
+<span class="cstat-no" title="statement not covered">  if (!api.operations) {</span>
+<span class="cstat-no" title="statement not covered">    api.operations = [];</span>
   }
 &nbsp;
   // TODO: replace if existing HTTP operation in same api path
-<span class="cstat-no" title="statement not covered" >  var op = {</span>
+<span class="cstat-no" title="statement not covered">  var op = {</span>
     'parameters': spec.parameters,
     'method': spec.method,
     'notes': spec.notes,
@@ -466,23 +464,24 @@ module.exports.appendToApi = appendToApi;
   };
 &nbsp;
   // Add custom fields.
-<span class="cstat-no" title="statement not covered" >  op = _.extend({}, spec, op);</span>
+<span class="cstat-no" title="statement not covered">  op = _.extend({}, spec, op);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!spec.type) {</span>
-<span class="cstat-no" title="statement not covered" >    op.type = 'void';</span>
+<span class="cstat-no" title="statement not covered">  if (!spec.type) {</span>
+<span class="cstat-no" title="statement not covered">    op.type = 'void';</span>
   }
-<span class="cstat-no" title="statement not covered" >  api.operations.push(op);</span>
+<span class="cstat-no" title="statement not covered">  api.operations.push(op);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!rootResource.models) {</span>
-<span class="cstat-no" title="statement not covered" >    rootResource.models = {};</span>
+<span class="cstat-no" title="statement not covered">  if (!rootResource.models) {</span>
+<span class="cstat-no" title="statement not covered">    rootResource.models = {};</span>
   }
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 23:52:45 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 18:49:53 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
