@@ -1,6 +1,6 @@
 # npmtest-swagger-node-express
 
-#### test coverage for  [swagger-node-express (v2.1.3)](https://github.com/swagger-api/swagger-node-express)  [![npm package](https://img.shields.io/npm/v/npmtest-swagger-node-express.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-swagger-node-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-swagger-node-express.svg)](https://travis-ci.org/npmtest/node-npmtest-swagger-node-express)
+#### basic test coverage for  [swagger-node-express (v2.1.3)](https://github.com/swagger-api/swagger-node-express)  [![npm package](https://img.shields.io/npm/v/npmtest-swagger-node-express.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-swagger-node-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-swagger-node-express.svg)](https://travis-ci.org/npmtest/node-npmtest-swagger-node-express)
 
 #### Wordnik swagger implementation for the express framework
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-swagger-node-express/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-swagger-node-express/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-swagger-node-express/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-swagger-node-express/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-swagger-node-express/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-swagger-node-express/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-swagger-node-express/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-swagger-node-express/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-swagger-node-express/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-swagger-node-express/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-swagger-node-express/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-swagger-node-express/build/coverage.html/index.html)
 
@@ -95,7 +95,8 @@
         "start": "node sample-application/app.js",
         "test": "mocha -r should './test/**/*.js'"
     },
-    "version": "2.1.3"
+    "version": "2.1.3",
+    "bin": {}
 }
 ```
 
